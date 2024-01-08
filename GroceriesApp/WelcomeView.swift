@@ -1,41 +1,47 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    @State private var presentCategories = false
+    
     var body: some View {
-        ZStack {
-            Image(uiImage: Images.Welcome.background)
-                .resizable()
-                .scaledToFill()
-                .edgesIgnoringSafeArea(.all)
-            
-            VStack {
-                Spacer()
-                Image(uiImage: Images.Welcome.logo)
+        NavigationStack {
+            ZStack {
+                Image(uiImage: Images.Welcome.background)
                     .resizable()
-                    .scaledToFit()
-                    .frame(width: 50, height: 50)
-                Text("Welcome to our store")
-                    .font(.system(size: 48, weight: .bold, design: .rounded))
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(.white)
-                    .padding(.bottom, 8)
-                Text("Get your groceries in as fast as one hour")
-                    .font(.system(size: 18, weight: .regular, design: .rounded))
-                    .foregroundColor(Color.description)
-                    .padding(.bottom, 40)
-                Button {
-                    // 3121
-                } label: {
-                    Text("Get Started")
+                    .scaledToFill()
+                    .edgesIgnoringSafeArea(.all)
+                
+                VStack {
+                    Spacer()
+                    Image(uiImage: Images.Welcome.logo)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 50, height: 50)
+                    Text("Welcome to our store")
+                        .font(.system(size: 48, weight: .bold, design: .rounded))
+                        .multilineTextAlignment(.center)
                         .foregroundColor(.white)
-                        .font(.system(size: 18, weight: .bold, design: .rounded))
+                        .padding(.bottom, 8)
+                    Text("Get your groceries in as fast as one hour")
+                        .font(.system(size: 18, weight: .regular, design: .rounded))
+                        .foregroundColor(Color.description)
+                        .padding(.bottom, 40)
+                    Button {
+                        presentCategories.toggle()
+                    } label: {
+                        Text("Get Started")
+                            .foregroundColor(.white)
+                            .font(.system(size: 18, weight: .bold, design: .rounded))
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 16)
+                    .background(Color.groceriesGreen)
+                    .cornerRadius(12)
+                    .padding(.horizontal, 30)
+                    .padding(.bottom, 90)
                 }
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 16)
-                .background(Color.groceriesGreen)
-                .cornerRadius(12)
-                .padding(.horizontal, 30)
-                .padding(.bottom, 90)
+            }.navigationDestination(isPresented: $presentCategories) {
+                Text("Categiories Screen")
             }
         }
     }
