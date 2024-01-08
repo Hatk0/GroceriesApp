@@ -3,10 +3,21 @@ import SwiftUI
 struct CategoriesView: View {
     @State private var searchText = ""
     
+    private var viewModel = CategoriesViewModel()
+    let colums = [
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
+    
     var body: some View {
         NavigationStack {
-            ScrollView{
-                
+            ScrollView {
+                LazyVGrid(columns: colums, spacing: 20) {
+                    ForEach(viewModel.categoryList, id: \.self.id) { item in
+                        CategoryCard(model: item)
+                    }
+                }
+                .padding(.horizontal)
             }
             .navigationTitle("Find products")
             .navigationBarTitleDisplayMode(.inline)

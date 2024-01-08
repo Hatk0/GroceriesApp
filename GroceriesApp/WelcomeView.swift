@@ -41,7 +41,7 @@ struct WelcomeView: View {
                     .padding(.bottom, 90)
                 }
             }.navigationDestination(isPresented: $presentCategories) {
-                Text("Categiories Screen")
+                CategoriesView()
             }
         }
     }
