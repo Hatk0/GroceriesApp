@@ -14,6 +14,7 @@
 		73E7AAC02B4C819300B109DF /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E7AABF2B4C819300B109DF /* Color+Ext.swift */; };
 		73E7AAC22B4C81AA00B109DF /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E7AAC12B4C81AA00B109DF /* Images.swift */; };
 		73E7AAC42B4C821A00B109DF /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E7AAC32B4C821A00B109DF /* WelcomeView.swift */; };
+		73E7AAC62B4C88EB00B109DF /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E7AAC52B4C88EB00B109DF /* CategoriesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		73E7AABF2B4C819300B109DF /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		73E7AAC12B4C81AA00B109DF /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		73E7AAC32B4C821A00B109DF /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		73E7AAC52B4C88EB00B109DF /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				73E7AABB2B4C800B00B109DF /* Model */,
 				73E7AAAD2B4C7F2500B109DF /* GroceriesAppApp.swift */,
 				73E7AAC32B4C821A00B109DF /* WelcomeView.swift */,
+				73E7AAC52B4C88EB00B109DF /* CategoriesView.swift */,
 				73E7AAB12B4C7F2600B109DF /* Assets.xcassets */,
 				73E7AAB32B4C7F2600B109DF /* Preview Content */,
 			);
@@ -164,6 +167,7 @@
 			files = (
 				73E7AAC42B4C821A00B109DF /* WelcomeView.swift in Sources */,
 				73E7AAC02B4C819300B109DF /* Color+Ext.swift in Sources */,
+				73E7AAC62B4C88EB00B109DF /* CategoriesView.swift in Sources */,
 				73E7AAC22B4C81AA00B109DF /* Images.swift in Sources */,
 				73E7AABD2B4C808500B109DF /* CategoryViewModel.swift in Sources */,
 				73E7AAAE2B4C7F2500B109DF /* GroceriesAppApp.swift in Sources */,
