@@ -2,7 +2,7 @@ import UIKit
 
 struct Images {
     struct Welcome {
-        static let logo = UIImage(named: "logo")!
+        static let logo = UIImage(named: "Logo")!
         static let background = UIImage(named: "welcomeBackground")!
     }
     
